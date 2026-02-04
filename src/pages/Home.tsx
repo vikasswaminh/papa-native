@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { Cpu, Shield, Globe, Terminal, ExternalLink, Github, Mail, Linkedin } from 'lucide-react';
 
 const projects = [
@@ -155,9 +156,9 @@ const Home: React.FC = () => {
                   </div>
                   <div className="flex items-center justify-between">
                     {project.link ? (
-                      <a href={project.link} className="text-sm font-semibold flex items-center hover:text-brand-blue transition-colors">
+                      <Link to={project.link} className="text-sm font-semibold flex items-center hover:text-brand-blue transition-colors">
                         View Details <ExternalLink className="w-4 h-4 ml-1" />
-                      </a>
+                      </Link>
                     ) : (
                       <div />
                     )}

@@ -11,7 +11,8 @@ import {
   ChevronRight,
   Settings,
   GitBranch,
-  Rocket
+  Rocket,
+  Github
 } from 'lucide-react';
 
 const FW1: React.FC = () => {
