@@ -62,7 +62,7 @@ const FW1: React.FC = () => {
               <span className="font-bold tracking-widest uppercase text-sm">Product Guide v1</span>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight">
-              Papanative: <span className="text-brand-blue">Headless Network Appliance</span>
+              Papanative: <span className="text-brand-blue">FW1 Appliance</span>
             </h1>
             <p className="text-xl text-gray-400 leading-relaxed">
               Building a modern, secure, and high-performance firewall using Rust safety, 
@@ -81,8 +81,16 @@ const FW1: React.FC = () => {
             <section id="scope" className="scroll-mt-24">
               <h2 className="text-2xl font-bold mb-6 flex items-center">
                 <Layers className="w-6 h-6 mr-3 text-brand-blue" />
-                Product Scope
+                Product Scope & Philosophy
               </h2>
+              <div className="bg-brand-blue/10 border border-brand-blue/20 p-6 rounded-2xl mb-8">
+                <h3 className="text-brand-blue font-bold mb-2">Core Philosophy</h3>
+                <p className="text-sm text-gray-300 leading-relaxed">
+                  <span className="font-bold text-white">Do NOT fight Linux. Parasite it.</span> The Linux kernel stays untouched initially. 
+                  We own the packet path via eBPF/XDP, userspace Rust crypto, and policy logic. 
+                  This is how serious vendors ship.
+                </p>
+              </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="bg-white/5 border border-white/10 p-6 rounded-2xl">
                   <h3 className="font-bold text-white mb-4">What we are building</h3>
@@ -92,6 +100,14 @@ const FW1: React.FC = () => {
                     <li className="flex items-start"><ChevronRight className="w-4 h-4 mr-2 text-brand-blue flex-shrink-0 mt-0.5" /> Policy-driven routing</li>
                     <li className="flex items-start"><ChevronRight className="w-4 h-4 mr-2 text-brand-blue flex-shrink-0 mt-0.5" /> Central Rust control plane</li>
                   </ul>
+                  <div className="mt-6 pt-6 border-t border-white/10">
+                    <h4 className="text-xs font-bold text-gray-500 uppercase mb-3">Runs on</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {["x86 mini-PC", "VM", "Cloud (soon)"].map(tag => (
+                        <span key={tag} className="px-2 py-1 bg-white/5 text-[10px] text-gray-400 rounded">{tag}</span>
+                      ))}
+                    </div>
+                  </div>
                 </div>
                 <div className="bg-white/5 border border-white/10 p-6 rounded-2xl">
                   <h3 className="font-bold text-gray-500 mb-4">NOT in v1</h3>
